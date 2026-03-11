@@ -70,6 +70,7 @@ portfolio
 Some highlighted projects from the portfolio:
 
 - **Real-Time Chat Application**
+- Will add more later on. 
 <!-- - **Face Recognition Attendance System**
 - **Student Attendance Management System**
 - **Web Development Projects** -->
