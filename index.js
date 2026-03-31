@@ -260,4 +260,8 @@ window.addEventListener("scroll",()=>{
   document.getElementById("scroll-progress").style.width = progress + "%";
 });
 
+document.querySelectorAll(".project-link").forEach(link=>{
+  link.addEventListener("click",(e)=>e.stopPropagation());
+});
+
 });
