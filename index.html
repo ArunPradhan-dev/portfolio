@@ -188,9 +188,13 @@
         <img src="images/project2.png" alt="Project 2">
         <h3>Business Intelligence System</h3><br>
         <h3>Tech: Python,</h3>
-        <p>A conversational AI-powered business intelligence system that transforms natural language queries into SQL, generates real-time insights, and visualizes data dynamically using multiple chart types. Designed to eliminate dependency on technical expertise, enabling non-technical users to explore and analyze data interactively.</p>
+        <p>A conversational AI-powered business intelligence system that transforms natural language queries into SQL,
+          generates real-time insights, and visualizes data dynamically using multiple chart types. Designed to
+          eliminate dependency on technical expertise, enabling non-technical users to explore and analyze data
+          interactively.</p>
         <div class="project-links">
-          <a href="https://github.com/ArunPradhan-dev/business_intelligence_dashboard.git" target="_blank" class="project-link">GitHub</a>
+          <a href="https://github.com/ArunPradhan-dev/business_intelligence_dashboard.git" target="_blank"
+            class="project-link">GitHub</a>
           <a href="https://arunpradhan.streamlit.app/" target="_blank" class="project-link live">Live</a>
         </div>
       </div>
@@ -211,12 +215,40 @@
   <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
 
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Name" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <textarea id="message" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <div class="contact-container">
+
+      <!-- LEFT SIDE -->
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <p>Feel free to reach out for collaboration or opportunities.</p>
+
+        <p>📧 arun3432y@gmail.com</p>
+        <p>📍 Kolkata, India</p>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <form id="contact-form" class="contact-form" autocomplete="off">
+
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="input-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" id="sendBtn">
+          <span>Send Message</span>
+        </button>
+
+        <p id="form-status"></p>
+
+      </form>
+    </div>
   </section>
 
   <!-- ================= MODAL ================= -->
@@ -239,6 +271,12 @@
     <p>© <span id="year"></span> Arun Kumar Pradhan. Built with ❤️.</p>
   </footer>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("GQqmjlxTijXjGSGBA");
+    })();
+  </script>
   <script src="index.js"></script>
 </body>
 
