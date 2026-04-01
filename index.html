@@ -7,6 +7,7 @@
   <title>Arun Kumar Pradhan | Portfolio</title>
   <link rel="icon" href="images/profile_image.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
@@ -154,15 +155,82 @@
   </section>
 
   <!-- ================= SKILLS ================= -->
-  <section id="skills">
-    <h2 data-aos="fade-up">Skills</h2>
-    <div class="skills-grid">
-      <div data-aos="zoom-in">HTML</div>
-      <div data-aos="zoom-in">CSS</div>
-      <div data-aos="zoom-in">JavaScript</div>
-      <div data-aos="zoom-in">Python</div>
-      <div data-aos="zoom-in">Flask</div>
-      <div data-aos="zoom-in">MySQL</div>
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+      <!-- FRONTEND -->
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+
+        <div class="skill">
+          <span><i class="devicon-html5-plain colored"></i> HTML</span>
+          <div class="bar">
+            <div class="progress html"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span><i class="devicon-css3-plain colored"></i> CSS</span>
+          <div class="bar">
+            <div class="progress css"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+          <div class="bar">
+            <div class="progress js"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACKEND -->
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-server"></i> Backend</h3>
+
+        <div class="skill">
+          <span><i class="devicon-python-plain colored"></i> Python</span>
+          <div class="bar">
+            <div class="progress python"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span><i class="devicon-flask-original"></i> Flask</span>
+          <div class="bar">
+            <div class="progress flask"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span><i class="devicon-java-plain colored"></i> Java</span>
+          <div class="bar">
+            <div class="progress java"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-tools"></i> Tools</h3>
+
+        <div class="skill">
+          <span><i class="devicon-git-plain colored"></i> Git</span>
+          <div class="bar">
+            <div class="progress git"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+          <div class="bar">
+            <div class="progress mysql"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -172,42 +240,73 @@
 
     <div class="projects-grid">
 
+      <!-- PROJECT 1 -->
       <div class="project-card" data-aos="fade-up">
-        <img src="images/project_1.png" alt="Project 1">
-        <h3>Real Time Chat Application</h3><br>
-        <h3>Tech: Flask, Socket.IO, Python</h3>
-        <p>A real-time chat platform built with Flask, Socket.IO, HTML, CSS, and JavaScript that enables instant
-          communication between multiple users over the web.</p>
-        <div class="project-links">
-          <a href="https://github.com/ArunPradhan-dev/chat_app.git" target="_blank" class="project-link">GitHub</a>
-          <a href="error.html" target="_blank" class="project-link live">Live</a>
+        <img src="images/project_1.png" alt="Chat Application">
+
+        <div class="project-content">
+          <h3>Real-Time Chat Application</h3>
+
+          <p class="tech">
+            Flask • Socket.IO • Python • HTML • CSS • JS
+          </p>
+
+          <p>
+            A real-time chat platform enabling instant communication between multiple users using WebSockets.
+          </p>
+
+          <div class="project-links">
+            <a href="https://github.com/ArunPradhan-dev/chat_app.git" target="_blank" class="project-link">GitHub</a>
+            <a href="error.html" target="_blank" class="project-link live">Live</a>
+          </div>
         </div>
       </div>
 
+      <!-- PROJECT 2 -->
       <div class="project-card" data-aos="fade-up">
-        <img src="images/project2.png" alt="Project 2">
-        <h3>Business Intelligence System</h3><br>
-        <h3>Tech: Python,</h3>
-        <p>A conversational AI-powered business intelligence system that transforms natural language queries into SQL,
-          generates real-time insights, and visualizes data dynamically using multiple chart types. Designed to
-          eliminate dependency on technical expertise, enabling non-technical users to explore and analyze data
-          interactively.</p>
-        <div class="project-links">
-          <a href="https://github.com/ArunPradhan-dev/business_intelligence_dashboard.git" target="_blank"
-            class="project-link">GitHub</a>
-          <a href="https://arunpradhan.streamlit.app/" target="_blank" class="project-link live">Live</a>
+        <img src="images/project2.png" alt="Business Intelligence System">
+
+        <div class="project-content">
+          <h3>Business Intelligence System</h3>
+
+          <p class="tech">
+            Python • SQL • NLP • Streamlit
+          </p>
+
+          <p>
+            AI-powered BI system that converts natural language queries into SQL and visualizes insights dynamically.
+          </p>
+
+          <div class="project-links">
+            <a href="https://github.com/ArunPradhan-dev/business_intelligence_dashboard.git" target="_blank"
+              class="project-link">GitHub</a>
+            <a href="https://arunpradhan.streamlit.app/" target="_blank" class="project-link live">Live</a>
+          </div>
         </div>
       </div>
 
+      <!-- PROJECT 3 -->
       <div class="project-card" data-aos="fade-up">
-        <img src="images/" alt="Project 3">
-        <h3>Project Title3</h3>
-        <p>Short description.</p>
-        <div class="project-links">
-          <a href="error.html" target="_blank" class="project-link">GitHub</a>
-          <a href="error.html" target="_blank" class="project-link live">Live</a>
+        <img src="images/project3.png" alt="Project 3">
+
+        <div class="project-content">
+          <h3>Upcoming Project</h3>
+
+          <p class="tech">
+            Coming Soon
+          </p>
+
+          <p>
+            More advanced full-stack projects will be added here.
+          </p>
+
+          <div class="project-links">
+            <a href="error.html" class="project-link">GitHub</a>
+            <a href="error.html" class="project-link live">Live</a>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 

@@ -314,5 +314,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const skills = document.querySelectorAll(".progress");
+
+  window.addEventListener("scroll", () => {
+    const trigger = window.innerHeight * 0.8;
+
+    skills.forEach(skill => {
+      const top = skill.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        skill.style.width = skill.classList.contains("html") ? "90%" :
+          skill.classList.contains("css") ? "85%" :
+            skill.classList.contains("js") ? "75%" :
+              skill.classList.contains("python") ? "80%" :
+                skill.classList.contains("flask") ? "70%" :
+                  skill.classList.contains("git") ? "75%" :
+                    skill.classList.contains("mysql") ? "70%" : "60%";
+      }
+    });
+  });
+
 });
 
