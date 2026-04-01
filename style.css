@@ -847,15 +847,16 @@ button:hover {
 }
 
 .skills-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .skill-category {
-    flex: 1;
-    min-width: 250px;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 .skill {
@@ -902,8 +903,9 @@ button:hover {
 .progress.flask {
     width: 70%;
 }
+
 .progress.java {
-  width: 75%;
+    width: 75%;
 }
 
 .progress.git {
@@ -913,33 +915,153 @@ button:hover {
 .progress.mysql {
     width: 70%;
 }
+
+.progress.oop {
+    width: 80%;
+}
+
+.progress.dbms {
+    width: 75%;
+}
+
+.progress.os {
+    width: 65%;
+}
+
+.progress.cn {
+    width: 55%;
+}
+
 .skill:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.skill span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.skill i {
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.skill:hover i {
+    transform: scale(1.2);
+}
+
+/* Category icon spacing */
+.skill-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.skill-category h3 i {
+  color: #00f7ff;
+  margin-right: 8px;
+}
+
+.progress.java {
+    background: linear-gradient(90deg, #f89820, #007396);
+}
+
+.skill span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+/* Levels */
+.tag.beginner {
+  background: #ff4d4d;
+  color: white;
+}
+
+.tag.intermediate {
+  background: #ffaa00;
+  color: black;
+}
+
+.tag.advanced {
+  background: #00ff88;
+  color: black;
+}
+.skill span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .skill span {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 500;
 }
 
-.skill i {
-  font-size: 18px;
+.skill span i {
+  color: #00f7ff;
+  font-size: 16px;
   transition: 0.3s;
 }
+.skill span i {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
 
-/* Hover effect */
-.skill:hover i {
+.skill:hover span i {
   transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #00f7ff);
+}
+.skill span i {
+  color: #00f7ff;
 }
 
-/* Category icon spacing */
-.skill-category h3 {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.skill:hover span i {
+  color: #ffffff;
 }
-.progress.java {
-  background: linear-gradient(90deg, #f89820, #007396);
+
+
+
+.skill {
+  position: relative;
+  overflow: hidden;
+}
+.skill::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(0, 247, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s;
+}
+
+
+.skill::before {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skill * {
+  position: relative;
+  z-index: 1;
+}
+.skill:hover::before {
+  width: 320px;
+  height: 320px;
+  opacity: 1;
 }

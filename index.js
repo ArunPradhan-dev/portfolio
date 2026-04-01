@@ -314,25 +314,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const skills = document.querySelectorAll(".progress");
+  const skillLevels = {
+  html: "90%",
+  css: "85%",
+  js: "75%",
+  python: "80%",
+  flask: "70%",
+  git: "75%",
+  mysql: "70%",
+  java: "75%",
+  oop: "80%",
+  dbms: "75%",
+  os: "70%",
+  cn: "65%"
+};
 
-  window.addEventListener("scroll", () => {
-    const trigger = window.innerHeight * 0.8;
+const skills = document.querySelectorAll(".progress");
 
-    skills.forEach(skill => {
-      const top = skill.getBoundingClientRect().top;
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.8;
 
-      if (top < trigger) {
-        skill.style.width = skill.classList.contains("html") ? "90%" :
-          skill.classList.contains("css") ? "85%" :
-            skill.classList.contains("js") ? "75%" :
-              skill.classList.contains("python") ? "80%" :
-                skill.classList.contains("flask") ? "70%" :
-                  skill.classList.contains("git") ? "75%" :
-                    skill.classList.contains("mysql") ? "70%" : "60%";
+  skills.forEach(skill => {
+    const top = skill.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      for (let key in skillLevels) {
+        if (skill.classList.contains(key)) {
+          skill.style.width = skillLevels[key];
+        }
       }
-    });
+    }
   });
+});
 
 });
 
